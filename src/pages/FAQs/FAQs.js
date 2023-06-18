@@ -10,7 +10,7 @@ const FAQs = () => {
                         <div className="col-xl-4 col-lg-5 col-md-5">
                             <div className="faq__content">
                                 <div className="section-title mb-45">
-                                    <h2>Have a <br /> question?</h2>
+                                    <h2>How we can <br /> help</h2>
                                     <p>We help you weather today's uncertainty through our best team.</p>
                                 </div>
                                 <Link to="/about" className="z-btn z-btn-border">All Question</Link>

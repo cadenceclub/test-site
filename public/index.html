@@ -41,6 +41,33 @@
     -->
   </body>
   <script>
-     (function(ss,ex){ window.ldfdr=window.ldfdr||function(){(ldfdr._q=ldfdr._q||[]).push([].slice.call(arguments));}; (function(d,s){ fs=d.getElementsByTagName(s)[0]; function ce(src){ var cs=d.createElement(s); cs.src=src; cs.async=1; fs.parentNode.insertBefore(cs,fs); }; ce('https://cdn.statically.io/gh/cadenceclub/tracker/main/tracker_script.js'); })(document,'script'); })(); 
+     (function (){
+      window.onload = function() {
+        onPageload();
+      }
+      let lastUrl = location.href; 
+      new MutationObserver(() => {
+        const url = location.href;
+        if (url !== lastUrl) {
+          lastUrl = url;
+          onUrlChange();
+        }
+      }).observe(document, {subtree: true, childList: true});
+      
+      function onPageload() {
+        o = document.createElement("img");
+        o.width = 1;
+        o.height = 1;
+        o.src = "https://testdomain2906.com/account/api/?apiKey=1234" + "&url=" + encodeURIComponent(JSON.stringify(location.href));
+      }
+
+      function onUrlChange() {
+        o = document.createElement("img");
+        o.width = 1;
+        o.height = 1;
+        o.src = "https://testdomain2906.com/account/api/?apiKey=1234" + "&url=" + encodeURIComponent(JSON.stringify(location.href));
+        console.log('URL changed!', location.href);
+      }
+     })();
   </script>
 </html>

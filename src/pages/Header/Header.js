@@ -37,9 +37,9 @@ const Header = () => {
                                                 <ul>
                                                     <li><NavLink to="/about">About Us </NavLink></li>
                                                     <li>
-                                                        <NavLink to="/header">Home Loans</NavLink>
+                                                        <NavLink to="/">Home Loans</NavLink>
                                                         <ul className="submenu">
-                                                            <li><NavLink to="/home">First Home Buyer</NavLink></li>
+                                                            <li><NavLink to="/homeOne">First Home Buyer</NavLink></li>
                                                             <li>
                                                                 <NavLink to="/homeTwo">Refinancing</NavLink>
                                                             </li>
